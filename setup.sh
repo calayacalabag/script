@@ -32,30 +32,30 @@ clear && clear && clear
 clear;clear;clear
 
 # // Banner
-echo -e "${YELLOW}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
-echo -e "  Developer » C@L@Y@${YELLOW}(${NC}${green} Stable Edition ${NC}${YELLOW})${NC}"
-echo -e "  Pembuat : ${green}C@L@Y@® ${NC}"
-echo -e "  Recode By C@L@Y@${YELLOW}(${NC} 2024 ${YELLOW})${NC}"
-echo -e "${YELLOW}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
-echo ""
-sleep 2
+#echo -e "${YELLOW}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
+#echo -e "  Developer » C@L@Y@${YELLOW}(${NC}${green} Stable Edition ${NC}${YELLOW})${NC}"
+#echo -e "  Pembuat : ${green}C@L@Y@® ${NC}"
+#echo -e "  Recode By C@L@Y@${YELLOW}(${NC} 2024 ${YELLOW})${NC}"
+#echo -e "${YELLOW}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
+#echo ""
+#sleep 2
 ###### IZIN SC 
 
 # // Checking Os Architecture
-if [[ $( uname -m | awk '{print $1}' ) == "x86_64" ]]; then
-    echo -e "${OK} Masuk Mas ( ${green}$( uname -m )${NC} )"
-else
-    echo -e "${EROR} Gak Masuk Mas ( ${YELLOW}$( uname -m )${NC} )"
-    exit 1
-fi
+#if [[ $( uname -m | awk '{print $1}' ) == "x86_64" ]]; then
+#    echo -e "${OK} OS Supported ( ${green}$( uname -m )${NC} )"
+#else
+#    echo -e "${EROR} OS Not Supported ( ${YELLOW}$( uname -m )${NC} )"
+#    exit 1
+#fi
 
 # // Checking System
 if [[ $( cat /etc/os-release | grep -w ID | head -n1 | sed 's/=//g' | sed 's/"//g' | sed 's/ID//g' ) == "ubuntu" ]]; then
-    echo -e "${OK} Your OS Is Supported ( ${green}$( cat /etc/os-release | grep -w PRETTY_NAME | head -n1 | sed 's/=//g' | sed 's/"//g' | sed 's/PRETTY_NAME//g' )${NC} )"
+    echo -e "${OK} OS Supported ( ${green}$( cat /etc/os-release | grep -w PRETTY_NAME | head -n1 | sed 's/=//g' | sed 's/"//g' | sed 's/PRETTY_NAME//g' )${NC} )"
 elif [[ $( cat /etc/os-release | grep -w ID | head -n1 | sed 's/=//g' | sed 's/"//g' | sed 's/ID//g' ) == "debian" ]]; then
-    echo -e "${OK} Your OS Is Supported ( ${green}$( cat /etc/os-release | grep -w PRETTY_NAME | head -n1 | sed 's/=//g' | sed 's/"//g' | sed 's/PRETTY_NAME//g' )${NC} )"
+    echo -e "${OK} OS Supported ( ${green}$( cat /etc/os-release | grep -w PRETTY_NAME | head -n1 | sed 's/=//g' | sed 's/"//g' | sed 's/PRETTY_NAME//g' )${NC} )"
 else
-    echo -e "${EROR} Your OS Is Not Supported ( ${YELLOW}$( cat /etc/os-release | grep -w PRETTY_NAME | head -n1 | sed 's/=//g' | sed 's/"//g' | sed 's/PRETTY_NAME//g' )${NC} )"
+    echo -e "${EROR} OS Not Supported ( ${YELLOW}$( cat /etc/os-release | grep -w PRETTY_NAME | head -n1 | sed 's/=//g' | sed 's/"//g' | sed 's/PRETTY_NAME//g' )${NC} )"
     exit 1
 fi
 
@@ -68,7 +68,7 @@ fi
 
 # // Validate Successfull
 echo ""
-read -p "$( echo -e "Press ${GRAY}[ ${NC}${green}Enter${NC} ${GRAY}]${NC} For Starting Installation") "
+read -p "$( echo -e "Tekan ${GRAY}[ ${NC}${green}Enter${NC} ${GRAY}]${NC} Untuk Memulai Instalasi") "
 echo ""
 clear
 if [ "${EUID}" -ne 0 ]; then
@@ -237,13 +237,15 @@ function base_package() {
     
 }
 clear
+sleep 2
+clear
 
 # Fungsi input domain
 function pasang_domain() {
-echo -e " \e[1;32mPlease Enter Your Subdomain $NC"
+echo -e " \e[1;32mPlease Enter Your Domain $NC"
 echo -e " ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 echo -e ""
-read -p " Masukan Domain : " host1
+read -p " Nama Domain : " host1
 echo -e ""
 echo -e " ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 echo "IP=" >> /var/lib/kyt/ipvps.conf
