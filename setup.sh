@@ -242,7 +242,7 @@ clear
 
 # Fungsi input domain
 function pasang_domain() {
-echo -e " \e[1;32mPlease Enter Your Domain $NC"
+echo -e " \e[1;32mMasukkan Domain Ente Mbah $NC"
 echo -e " ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 echo -e ""
 read -p " Nama Domain : " host1
