@@ -91,7 +91,7 @@ gem install lolcat
 apt install wondershaper -y
 clear
 # REPO    
-    REPO="https://raw.githubusercontent.com/calayacalabag/autoscript/main/"
+    REPO="https://raw.githubusercontent.com/calayacalabag/script/main/"
 
 ####
 start=$(date +%s)
@@ -259,7 +259,7 @@ restart_system(){
 MYIP=$(curl -sS ipv4.icanhazip.com)
 echo -e "\e[32mloading...\e[0m" 
 clear
-izinsc="https://raw.githubusercontent.com/calayacalabag/autoscript/main/register"
+izinsc="https://raw.githubusercontent.com/calayacalabag/script/main/register"
 # USERNAME
 rm -f /usr/bin/user
 username=$(curl $izinsc | grep $MYIP | awk '{print $2}')
@@ -296,8 +296,8 @@ else
 sts="${Error}"
 fi
 TIMES="10"
-CHATID="634882497"
-KEY="6854390843:AAHnygrqUOSq-5spVPBBrOvBMy4xcdUBPBU"
+CHATID="63488249"
+KEY="6854390843:AAHnygrqUOSq-5spVPBBrOvBMy4xcdUPBU"
 URL="https://api.telegram.org/bot$KEY/sendMessage"
     TIMEZONE=$(printf '%(%H:%M:%S)T')
     TEXT="
@@ -315,7 +315,7 @@ URL="https://api.telegram.org/bot$KEY/sendMessage"
 <b>C@L@Y@</b>
 <code>━━━━━━━━━━━━━━━━━━━━━━━━━</code>
 <i>Automatic Notifications From Github</i>
-"'&reply_markup={"inline_keyboard":[[{"text":"ᴏʀᴅᴇʀ","url":"https://wa.me/+628984880039"}]]}' 
+"'&reply_markup={"inline_keyboard":[[{"text":"ᴏʀᴅᴇʀ","url":"https://wa.me/+6282257537773"}]]}' 
 
     curl -s --max-time $TIMES -d "chat_id=$CHATID&disable_web_page_preview=1&text=$TEXT&parse_mode=html" $URL >/dev/null
 }
@@ -522,7 +522,7 @@ print_success "Password SSH"
 function udp_mini(){
 clear
 print_install "Memasang Service Limit IP & Quota"
-wget -q https://raw.githubusercontent.com/calayacalabag/autoscript/main/config/fv-tunnel && chmod +x fv-tunnel && ./fv-tunnel
+wget -q https://raw.githubusercontent.com/calayacalabag/script/main/config/fv-tunnel && chmod +x fv-tunnel && ./fv-tunnel
 
 # // Installing UDP Mini
 mkdir -p /usr/local/kyt/
