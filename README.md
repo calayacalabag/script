@@ -4,5 +4,5 @@ rm -rf setup.sh && sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w net.i
 ```
 ## UPDATE SCRIPT
 ```
-wget -q https://raw.githubusercontent.com/calayacalabag/autoscript/main/update.sh && chmod +x update.sh && ./update.sh
+wget -q https://raw.githubusercontent.com/calayacalabag/script/main/update.sh && chmod +x update.sh && ./update.sh
 ```
