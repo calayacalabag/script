@@ -132,6 +132,21 @@ function is_root() {
 
 }
 
+# Fungsi input domain
+function pasang_domain() {
+echo -e " \e[1;32mMasukkan Domain Ente Mbah $NC"
+echo -e " ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+echo -e ""
+read -p " Nama Domain : " host1
+echo -e ""
+echo -e " ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+echo "IP=" >> /var/lib/kyt/ipvps.conf
+echo $host1 > /etc/xray/domain
+echo $host1 > /root/domain
+echo ""
+}
+clear
+
 # Buat direktori xray
 print_install "Membuat direktori xray"
     mkdir -p /etc/xray
@@ -238,21 +253,6 @@ function base_package() {
 }
 clear
 sleep 2
-clear
-
-# Fungsi input domain
-function pasang_domain() {
-echo -e " \e[1;32mMasukkan Domain Ente Mbah $NC"
-echo -e " ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
-echo -e ""
-read -p " Nama Domain : " host1
-echo -e ""
-echo -e " ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
-echo "IP=" >> /var/lib/kyt/ipvps.conf
-echo $host1 > /etc/xray/domain
-echo $host1 > /root/domain
-echo ""
-}
 clear
 
 #GANTI PASSWORD DEFAULT
